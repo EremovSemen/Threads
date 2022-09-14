@@ -4,7 +4,6 @@ public class Task1 {
 
     public  synchronized void stage1() {
 
-//            if(num1 == num2) {
         if(num != 1){
             try {
                 notify();
@@ -24,20 +23,6 @@ public class Task1 {
             notify();
         }
 
-
-
-//                num1++;
-//                if(num1 > num2 & num1 > num3) {
-//                    notify();
-//                }
-//                if(num1 != num2 || num1 != num3) {
-//                    try {
-//                        wait();
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
     }
 
 
@@ -65,23 +50,10 @@ public class Task1 {
         }
 
 
-//                num2++;
-//                if( num2 > num3 & num2 == num1) {
-//                    notify();
-//                }
-//                if (num2 == num1 & num2 > num3) {
-//                    try {
-//                        wait();
-//
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
+
     }
 
     public synchronized void stage3() {
-//            if( num3 < num2) {
         try {
             Thread.sleep(400);
         } catch (InterruptedException e) {
@@ -100,28 +72,6 @@ public class Task1 {
             num = 1;
             notify();
         }
-
-
-
-
-
-
-
-//                num3++;
-//                if(num3 == num1 & num3 == num2) {
-//                    notify();
-//                }
-//                if(num3 == num2 ) {
-//                    try {
-//                        wait();
-//
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-
-//            }
-
     }
 
 
@@ -148,10 +98,5 @@ public class Task1 {
 
             }
         }).start();
-
-
     }
-
-
-
 }
